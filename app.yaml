@@ -1,0 +1,16 @@
+application: arts-612
+version: downtime
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+# index files
+# index files
+handlers:
+- url: /www/(.+)
+  static_files: www/\1
+  upload: www/(.+)
+
+- url: /(.*)
+  static_files: www/index.html
+  upload: www/index.html
